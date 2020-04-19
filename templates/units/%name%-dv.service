@@ -1,0 +1,7 @@
+[Unit]
+Description={name} downvote routine
+
+[Service]
+Type=oneshot
+WorkingDirectory={working_directory}
+ExecStart=/usr/bin/env pipenv run python src/downvotes.py

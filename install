@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+NAME=curangel
+WD=$(pwd)
+USER_UNIT_DIR=~/.config/systemd/user
+UWSGI_PATH=$(which uwsgi)
+
+pipenv install
+pipenv run python scripts/expand-templates.py templates . \
+       name=$NAME \
+       working_directory=$WD \
+       uwsgi_path=$UWSGI_PATH
+
+
+mkdir -p $USER_UNIT_DIR
+for i in $(ls units)
+do
+    ln -fs $WD/units/$i $USER_UNIT_DIR
+    systemctl --user enable --quiet $i
+done

@@ -1,0 +1,11 @@
+[Unit]
+Description=hourly {name} blacklist update
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy={name}.target
+

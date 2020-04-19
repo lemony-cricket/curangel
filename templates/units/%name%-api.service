@@ -1,0 +1,15 @@
+[Unit]
+Description={name} API Server
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Service]
+Type=simple
+WorkingDirectory={working_directory}
+ExecStart=/usr/bin/env pipenv run uwsgi --need-plugin cgi --ini config/uwsgi.ini
+TimeoutStartSec=0
+RestartSec=3
+Restart=always
+
+[Install]
+WantedBy={name}.target

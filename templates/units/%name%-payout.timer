@@ -1,0 +1,11 @@
+[Unit]
+Description=nightly {name} payout
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Timer]
+OnCalendar=*-*-* 18:00:00
+AccuracySec=1
+
+[Install]
+WantedBy={name}.target

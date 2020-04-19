@@ -5,4 +5,8 @@
 *.pyc
 *.ini
 *.yaml
-credentials.txt
+/units/
+/config/
+!/templates/*
+!/templates/**
+/credentials.txt

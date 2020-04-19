@@ -1,0 +1,7 @@
+[Unit]
+Description={name} payout script
+
+[Service]
+Type=oneshot
+WorkingDirectory={working_directory}
+ExecStart=/usr/bin/env pipenv run python src/payout.py
