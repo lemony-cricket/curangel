@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+WD=$(pwd)
+USER_UNIT_DIR=~/.config/systemd/user
+
+for i in $(ls units)
+do
+    systemctl --user disable --now --quiet $i
+    rm -f $USER_UNIT_DIR/$i
+done

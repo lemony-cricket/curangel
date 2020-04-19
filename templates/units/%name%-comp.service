@@ -1,0 +1,7 @@
+[Unit]
+Description={name} compilation publisher
+
+[Service]
+Type=oneshot
+WorkingDirectory={working_directory}
+ExecStart=/usr/bin/env pipenv run python src/compilation.py

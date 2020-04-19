@@ -1,0 +1,12 @@
+[Unit]
+Description={name} downvote cycle timer
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Timer]
+OnCalendar=*-*-* 10:00:00
+OnCalendar=*-*-* 22:00:00
+AccuracySec=1
+
+[Install]
+WantedBy={name}.target

@@ -1,0 +1,15 @@
+[Unit]
+Description={name} voting bot
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Service]
+Type=simple
+WorkingDirectory={working_directory}
+ExecStart=/usr/bin/env pipenv run python src/curangel.py
+TimeoutStartSec=0
+RestartSec=3
+Restart=always
+
+[Install]
+WantedBy={name}.target

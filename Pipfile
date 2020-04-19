@@ -9,6 +9,7 @@ rfc3987 = "*"
 pyyaml = "*"
 munch = "*"
 requests = "*"
+loguru = "*"
 
 [dev-packages]
 jedi = "*"

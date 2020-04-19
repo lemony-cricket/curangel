@@ -1,0 +1,6 @@
+[Unit]
+Description={name} services
+
+[Install]
+WantedBy=default.target
+

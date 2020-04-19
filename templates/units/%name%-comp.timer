@@ -1,0 +1,11 @@
+[Unit]
+Description=nightly {name} compilation
+PartOf={name}.target
+StopWhenUnneeded=Yes
+
+[Timer]
+OnCalendar=*-*-* 23:59:00
+AccuracySec=1
+
+[Install]
+WantedBy={name}.target
