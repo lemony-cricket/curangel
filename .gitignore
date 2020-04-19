@@ -7,5 +7,6 @@
 *.yaml
 /units/
 /config/
+!/templates/*
 !/templates/**
-credentials.txt
+/credentials.txt
